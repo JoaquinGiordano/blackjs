@@ -1,6 +1,6 @@
 
 // Copyright (c) 2017 Joaquin Giordano
-// version:1.3.0
+// version:1.2.0
 
 
 function checkIdClassOther(text){
