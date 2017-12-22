@@ -322,10 +322,8 @@ function getElement(idclass){
 }
 
 function contains(where,data){
-
 	var checkWhere = checkIdClassOther(where);
 	where = where.substr(1);
-
 	if(checkWhere == "id"){
 		try{
 			var number = document.getElementById(where).value.indexOf(data);
@@ -361,13 +359,12 @@ function contains(where,data){
 		}
 	}
 	if(checkWhere == "other"){
-			var number = where.indexOf(data);
-			if(number != -1){
-				return true;
-			}else{
-				return false;
-			}
-		
+		var number = where.indexOf(data);
+		if(number != -1){
+			return true;
+		}else{
+			return false;
+		}
 	}
 
 }
@@ -471,6 +468,39 @@ function getText(idclass){
 
 function go(url){
 	window.location = url;
+}
+
+function saveData(where,data){
+	var checkData = checkIdClassOther(data);
+	if(checkData == "id"){
+		data = data.substr(1);
+		try{
+			var data = document.getElementById(data).value;
+			localStorage.setItem(where,data);
+		}catch(err){
+			var data = document.getElementById(data).innerHTML;
+			localStorage.setItem(where,data);
+		}
+	}
+	if(checkData == "class"){
+		data = data.substr(1);
+		try{
+			var data = document.getElementByClass(data).value;
+			localStorage.setItem(where,data);
+		}catch(err){
+			var data = document.getElementByClass(data).innerHTML;
+			localStorage.setItem(where,data);
+		}
+	}
+	if(checkData == "other"){
+	
+		localStorage.setItem(where,data);
+	}
+
+}
+
+function getData(where){
+	return localStorage.getItem(where);
 }
 
 function getImageSrc(idclass){
