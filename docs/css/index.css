@@ -102,3 +102,18 @@ body,html{
 
 }
 
+.title{
+
+	color:white;
+	font-family: Montserrat;
+	font-weight: 300;
+
+}
+#copy{
+
+	color:#2A2A2A;
+	font-size: 12px;
+	font-family: Montserrat;
+	font-weight: 400;
+
+}
