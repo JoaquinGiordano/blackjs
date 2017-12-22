@@ -1,6 +1,6 @@
 
 // Copyright (c) 2017 Joaquin Giordano
-// version: 0.0.1
+// version: 0.0.2
 
 function checkIdClassOther(text){
 	var fl = text.charAt(0);
