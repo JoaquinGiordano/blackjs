@@ -13,6 +13,6 @@ onClick('#email_btn',function(){
 
 onClick('#download_btn',function(){
 
-	go('../blackjs.js');
+	go('js/blackjs.js');
 
 });
