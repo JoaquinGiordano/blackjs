@@ -38,7 +38,7 @@ function insert(what,id,eclass,where,data,plusdata) {
 			document.getElementById(where).appendChild(img);
 		}
 		if(checkWhere == "class"){
-			document.getElementByClass(where).appendChild(img);
+			document.getElementsByClassName(where).appendChild(img);
 		}
 		if(checkWhere == "other"){
 			if(where == "body"){

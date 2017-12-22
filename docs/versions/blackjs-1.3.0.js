@@ -1,6 +1,6 @@
 
 // Copyright (c) 2017 Joaquin Giordano
-// version:1.2.0
+// version:1.3.0
 
 
 function checkIdClassOther(text){
@@ -38,7 +38,7 @@ function insert(what,id,eclass,where,data,plusdata) {
 			document.getElementById(where).appendChild(img);
 		}
 		if(checkWhere == "class"){
-			document.getElementByClass(where).appendChild(img);
+			document.getElementsByClassName(where).appendChild(img);
 		}
 		if(checkWhere == "other"){
 			if(where == "body"){
