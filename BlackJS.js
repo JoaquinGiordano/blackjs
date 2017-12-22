@@ -1,6 +1,6 @@
 
 // Copyright (c) 2017 Joaquin Giordano
-// version: 0.0.2
+// version: 0.0.3
 
 function checkIdClassOther(text){
 	var fl = text.charAt(0);
@@ -213,83 +213,63 @@ function getElement(idclass){
 }
 
 function sum(numbers){
-	var arrayL = numbers.length;
+var fs = true;
 	var actualNumber = 0;
-	var ft = true;
-	var i;
-	for(i = 0;i <= arrayL;i++){
-		if(i != arrayL){
-			if (ft) {
-					actualNumber = numbers[0] + numbers[1];
-					ft = false;
-					i++;
-			}else{
-					actualNumber = actualNumber + numbers[i];
-			}
+	numbers.forEach(function(e) {
+		if(fs == true){
+			actualNumber = e;
+			fs = false;
 		}else{
-			return actualNumber;
+			actualNumber += e;
 		}
-	}
+		
+	})
+	return actualNumber;
 }
 
 function subs(numbers){
-var arrayL = numbers.length;
+	var fs = true;
 	var actualNumber = 0;
-	var ft = true;
-	var i;
-	for(i = 0;i <= arrayL;i++){
-		if(i != arrayL){
-			if (ft) {
-					actualNumber = numbers[0] - numbers[1];
-					ft = false;
-					i++;
-			}else{
-					actualNumber = actualNumber - numbers[i];
-			}
+	numbers.forEach(function(e) {
+		if(fs == true){
+			actualNumber = e;
+			fs = false;
 		}else{
-			return actualNumber;
+			actualNumber -= e;
 		}
-	}
+		
+	})
+	return actualNumber;
 }
 
 function devide(numbers){
-var arrayL = numbers.length;
+var fs = true;
 	var actualNumber = 0;
-	var ft = true;
-	var i;
-	for(i = 0;i <= arrayL;i++){
-		if(i != arrayL){
-			if (ft) {
-					actualNumber = numbers[0] / numbers[1];
-					ft = false;
-					i++;
-			}else{
-					actualNumber = actualNumber / numbers[i];
-			}
+	numbers.forEach(function(e) {
+		if(fs == true){
+			actualNumber = e;
+			fs = false;
 		}else{
-			return actualNumber;
+			actualNumber /= e;
 		}
-	}
+		
+	})
+	return actualNumber;
 }
 
 function multiply(numbers){
-var arrayL = numbers.length;
+var fs = true;
 	var actualNumber = 0;
-	var ft = true;
-	var i;
-	for(i = 0;i <= arrayL;i++){
-		if(i != arrayL){
-			if (ft) {
-					actualNumber = numbers[0] * numbers[1];
-					ft = false;
-					i++;
-			}else{
-					actualNumber = actualNumber * numbers[i];
-			}
+	numbers.forEach(function(e) {
+		if(fs == true){
+			actualNumber = e;
+			fs = false;
 		}else{
-			return actualNumber;
+			actualNumber *= e;
 		}
-	}
+		
+	})
+	return actualNumber;
 }
 
 function getText(idclass){
