@@ -1,3 +1,9 @@
+
+#1.3.1 (22/12/2017) [important]
+
+* Fixed "other" problem
+* Fixed classes problem
+
 #1.3.0 (22/12/2017)
 
 * Added saveData() function
