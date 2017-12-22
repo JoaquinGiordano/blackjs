@@ -13,6 +13,6 @@ onClick('#email_btn',function(){
 
 onClick('#download_btn',function(){
 
-	go('js/blackjs.js');
+	go('https://joaquingiordano.github.io/BlackJS/js/blackjs.js');
 
 });
