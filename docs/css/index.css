@@ -1,0 +1,104 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat:100,300,400,700,900');
+
+@media screen and (max-width: 600px) {
+
+#profile_img{
+	
+	width: 200px;
+	height: 200px;
+	border-radius: 200px;
+
+	margin-top: 20%;
+
+}
+#desc{
+
+	color:white;
+	font-family: Montserrat;
+	font-weight: 300;
+	padding-left: 20px;
+	padding-right: 20px;
+	padding-bottom: 20px;
+	
+}
+}
+
+body,html{
+
+	height: 100%;
+	width: 100% ;
+	margin: 0;
+	background-color: black;
+}
+
+#topcontent{
+
+	width: 100%;
+	height: calc(100% - 55px);
+	background: -webkit-linear-gradient(left top,#090909, #272727); 
+    background: -o-linear-gradient(bottom right,#090909, #272727);
+    background: -moz-linear-gradient(bottom right,#090909, #272727); 
+    background: linear-gradient(to bottom right, #090909, #272727);
+	text-align: center;
+}
+@media screen and (min-width: 600px) {
+#profile_img{
+
+	width: 200px;
+	height: 200px;
+	border-radius: 200px;
+	margin-top: 120px;
+
+}
+
+#desc{
+
+	color:white;
+	font-family: Montserrat;
+	font-weight: 300;
+	padding-left: 20px;
+	padding-right: 20px;
+	
+}
+}
+#name{
+
+	color:white;
+	font-family: Montserrat;
+	font-weight: 400;
+
+}
+
+
+
+#bottomcontent{
+
+	margin: 5px;
+	text-align: center;
+
+}
+
+.btn{
+
+	border:0px;
+	padding: 15px;
+	border-radius: 4px;
+	background: #000000;
+	color: white;
+
+ outline: none;
+}
+
+.btn:hover{
+
+  background: -webkit-linear-gradient(left top,#090909, #272727); 
+    background: -o-linear-gradient(bottom right,#090909, #272727);
+    background: -moz-linear-gradient(bottom right,#090909, #272727); 
+    background: linear-gradient(to bottom right, #090909, #272727);
+
+    color:white;
+   
+   	cursor: pointer;
+
+}
+
