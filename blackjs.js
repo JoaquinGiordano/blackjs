@@ -66,6 +66,30 @@ function insert(what,id,eclass,where,data,plusdata) {
 		}
 		p.innerHTML = data;
 	}
+	if(what == "button"){
+		var button = document.createElement(what);
+		if(id != null){
+			button.setAttribute('id', id);
+		}
+		if(eclass != null){
+			button.setAttribute('class', eclass);
+		}
+		if(plusdata != null){
+			button.setAttribute('onClick', plusdata);
+		}
+		if(checkWhere == "id"){
+			document.getElementById(where).appendChild(button);
+		}
+		if(checkWhere == "class"){
+			document.getElementByClass(where).appendChild(button);
+		}
+		if(checkWhere == "other"){
+			if(where == "body"){
+				document.body.appendChild(button);
+			}
+		}
+		button.innerHTML = data;
+	}
 	if(what == "a"){
 		var a = document.createElement(what);
 		if(id != null){
