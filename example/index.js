@@ -4,6 +4,8 @@ insert('a',null,null,'#container','Dog Image','https://www.codeproject.com/KB/GD
 
 insert('p','#paper2',null,'#container','hello');
 
+insert('textarea',null,'.textarea','#container','I am a TextArea');
+
 log(chars('#paper'));
 
 getElement('#paper2').innerHTML = "Sum number: " + sum([2,2,2]) + " Subs number: " + subs([256,128,64]) + " Devide number: " + devide([10,2]) + " Multiply number: " + multiply([5,5]);

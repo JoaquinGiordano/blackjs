@@ -173,6 +173,27 @@ function insert(what,id,eclass,where,data,plusdata) {
 		}
 		h4.innerHTML = data;
 	}
+	if(what == "textarea"){
+		var textarea = document.createElement(what);
+		if(id != null){
+			textarea.setAttribute('id', id);
+		}
+		if(eclass != null){
+			textarea.setAttribute('class', eclass);
+		}
+		if(checkWhere == "id"){
+			document.getElementById(where).appendChild(textarea);
+		}
+		if(checkWhere == "class"){
+			document.getElementByClass(where).appendChild(textarea);
+		}
+		if(checkWhere == "other"){
+			if(where == "body"){
+				document.body.appendChild(textarea);
+			}
+		}
+		textarea.innerHTML = data;
+	}
 }
 
 function chars(text){
@@ -352,16 +373,32 @@ function time(data){
 		final == date;
 	}
 	if(e == "hour"){
-		final += date.getHours() + " ";
+		if(date.getHours() <= 9){
+			final += "0" + date.getHours() + " ";
+		}else{
+			final += date.getHours() + " ";	
+		}
 	}
 	if(e == "minute"){
-		final += date.getMinutes() + " ";
+		if(date.getMinutes() <= 9){
+			final += "0" + date.getMinutes() + " ";
+		}else{
+			final += date.getMinutes() + " ";	
+		}
 	}
 	if(e == "second"){
-		final += date.getSeconds() + " ";
+		if(date.getSeconds() <= 9){
+			final += "0" + date.getSeconds() + " ";
+		}else{
+			final += date.getSeconds() + " ";	
+		}
 	}
-	if(e == "milisecont"){
-		final += date.getMilliseconds() + " ";
+	if(e == "milisecond"){
+		if(date.getMilliseconds() <= 9){
+			final += "0" + date.getMilliseconds() + " ";
+		}else{
+			final += date.getMilliseconds() + " ";	
+		}
 	}
 	if(e == "day"){
 		final += date.getDate() + " ";
