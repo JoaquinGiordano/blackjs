@@ -1,3 +1,11 @@
+
+#1.6.0 (23/12/2017)
+
+* Added startTimer() function
+* Added stopTimer() function
+* Added clearData() function
+* Added countdown() function
+
 #1.5.0 (23/12/2017)
 
 * Added base64() function
@@ -42,4 +50,4 @@
 
 #1.1.0 (22/12/2017)
 
-* Innitial Commit
+* Initial Commit
