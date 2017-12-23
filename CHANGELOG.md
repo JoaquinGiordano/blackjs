@@ -1,3 +1,17 @@
+#1.5.0 (23/12/2017)
+
+* Added base64() function
+* Added anim() function
+* Added anim('#','slide','top') support
+* Added anim('#','slide','bottom') support
+* Added anim('#','slide','right') support
+* Added anim('#','slide','left') support
+* Added anim('#','enlarge','right') support
+* Added anim('#','enlarge','bottom') support
+* Added anim('#','fade','in') support
+* Added anim('#','fade','out') support
+
+
 #1.4.0 (23/12/2017)
 
 * Added wait() function
@@ -25,3 +39,7 @@
 * Added insert('div') support
 * Added isEqual() function
 * Added contains() function
+
+#1.1.0 (22/12/2017)
+
+* Innitial Commit
