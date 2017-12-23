@@ -1,3 +1,12 @@
+#1.4.0 (23/12/2017)
+
+* Added wait() function
+* Added sha1() function
+* Added toString() function
+* Added toInt() function
+* Added doTTT() function
+* Added insert('ul') support
+* Added insert('li') support
 
 #1.3.1 (22/12/2017) [important]
 
