@@ -1,7 +1,5 @@
 
 
-insert('p','#p',null,'body');
-
-startTimer(1,function(){
-  getElement('#p').innerHTML = countdown("Dec 25, 2017 00:00:00");
-});
+console.log(getElement('.p').text());
+console.log(getElement('#perro_img').src());
+console.log(getElement('#text').text());

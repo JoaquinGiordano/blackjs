@@ -1,4 +1,12 @@
 
+#2.0.0 (23/12/2017)
+
+* Changed the startTime function to start.time()
+* Changed the stopTime function to stop.time()
+* Changed the use for getElement() function
+* Added getElement().text() function
+* Added getElement().src() function 
+
 #1.6.0 (23/12/2017)
 
 * Added startTimer() function
