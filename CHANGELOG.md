@@ -1,11 +1,17 @@
 
-#2.0.0 (23/12/2017)
+#2.0.1 (24/12/2017)
+
+* Fixed getElement().src() function
+* Fixed getElement().text() function
+
+
+#2.0.0 (24/12/2017)
 
 * Changed the startTime function to start.time()
 * Changed the stopTime function to stop.time()
 * Changed the use for getElement() function
 * Added getElement().text() function
-* Added getElement().src() function 
+* Added getElement().src() function
 
 #1.6.0 (23/12/2017)
 
