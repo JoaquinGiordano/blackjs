@@ -1,4 +1,15 @@
 
+#2.1.0 (25/12/2017)
+
+* Added getElement().width() function
+* Added getElement().height() function
+* Added getElement().element() function
+* Added support to change the text of an element via getElement().text(text)
+* Added support to change the width of an element via getElement().width(width)
+* Added support to change the height of an element via getElement().height(height)
+* Added support to change the src of an image via getElement().src(src)
+
+
 #2.0.1 (24/12/2017)
 
 * Fixed getElement().src() function
