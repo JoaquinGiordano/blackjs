@@ -1,4 +1,16 @@
 
+#2.3.0 (25/12/2017)
+
+* Added a callback to the countdown() function
+* Added deprecated warning to anim() function
+* Added deprecated warning to onClick() function
+* Added deprecated warning to onPressKey() function
+* Added deprecated warning to onChange() function
+* Changed anim function to getElement().anim()
+* Changed onClick() event to getElement().onClick()
+* Changed onPressKey() event to getElement().onPressKey()
+* Changed onChange() event to getElement().onChange()
+
 #2.2.0 (25/12/2017)
 
 * Added deprecated warning to setImageSrc() function

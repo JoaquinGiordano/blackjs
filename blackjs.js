@@ -1,6 +1,6 @@
 
 // Copyright (c) 2017 Joaquin Giordano
-// version:2.2.0
+// version:2.3.0
 
 
 function checkIdClassOther(text){
@@ -531,6 +531,9 @@ function chars(text){
 }
 
 function anim(elem,type,to,pos,quantity,velocity = 1,callback) {
+
+		console.warn('WARNING: the function "anim()" is deprecated and it will be removed in the following versions, try to use "getElement(id or class).anim()"');
+
     var checkElem = checkIdClassOther(elem);
     if(checkElem == "id"){
                 elem = elem.substr(1);
@@ -691,14 +694,21 @@ function log(text){
 
 function getElement(idclass){
 	var checkIdClass = checkIdClassOther(idclass);
-	idclass = idclass.substr(1);
+
 	if(checkIdClass == "id"){
+		idclass = idclass.substr(1);
 		idclass = document.getElementById(idclass);
 	}
 	if(checkIdClass == "class"){
+		idclass = idclass.substr(1);
 		idclass = document.getElementsByClassName(idclass)[0];
 	}
+	if(checkIdClass == "other"){
+		if(idclass == "body"){
+			idclass = document.body;
+		}
 
+	}
 
 	function text(text){
 		if(text != undefined){
@@ -749,6 +759,165 @@ function height(px){
 	}
 }
 
+
+function anim(type,to,pos,quantity,velocity = 1,callback) {
+    idclass.style.display = "block";
+
+    if(type == "slide"){
+        if(to == "left"){
+             var id = setInterval(frame, velocity);
+             function frame() {
+                if (pos == quantity) {
+                    clearInterval(id);
+                     if(callback != undefined){
+                        callback();
+                    }
+                } else {
+                    pos++;
+                    idclass.style.right = pos + 'px';
+                }
+            }
+        }
+        if(to == "right"){
+             var id = setInterval(frame, velocity);
+             function frame() {
+                if (pos == quantity) {
+                    clearInterval(id);
+                    if(callback != undefined){
+                        callback();
+                    }
+                } else {
+                    pos++;
+                    idclass.style.left = pos + 'px';
+                }
+            }
+        }
+        if(to == "top"){
+             var id = setInterval(frame, velocity);
+             function frame() {
+                if (pos == quantity) {
+                    clearInterval(id);
+                     if(callback != undefined){
+                        callback();
+                    }
+                } else {
+                    pos++;
+                    idclass.style.bottom = pos + 'px';
+                }
+            }
+        }
+
+        if(to == "bottom"){
+             var id = setInterval(frame, velocity);
+             function frame() {
+                if (pos == quantity) {
+                    clearInterval(id);
+                     if(callback != undefined){
+                        callback();
+                    }
+                } else {
+                    pos++;
+                    idclass.style.top = pos + 'px';
+                }
+            }
+        }
+      }
+
+      if(type == "enlarge"){
+        if(to == "bottom"){
+             var id = setInterval(frame, velocity);
+             function frame() {
+                if (pos == quantity) {
+                    clearInterval(id);
+                     if(callback != undefined){
+                        callback();
+                    }
+                } else {
+                    pos++;
+                    idclass.style.height = pos + 'px';
+                }
+            }
+        }
+        if(to == "right"){
+             var id = setInterval(frame, velocity);
+             function frame() {
+                if (pos == quantity) {
+                    clearInterval(id);
+                     if(callback != undefined){
+                        callback();
+                    }
+                } else {
+                    pos++;
+
+                    idclass.style.width = pos + 'px';
+                }
+            }
+        }
+      }
+      if(type == "fade"){
+        if(to == "in"){
+             var id = setInterval(frame, velocity);
+             function frame() {
+                if (pos >= quantity) {
+                    clearInterval(id);
+                     if(callback != undefined){
+                        callback();
+                    }
+                } else {
+                    pos += 0.002;
+
+                    idclass.style.opacity = pos ;
+                }
+            }
+        }
+        }
+        if(to == "out"){
+             var id = setInterval(frame, velocity);
+             function frame() {
+                if (pos <= quantity) {
+                    clearInterval(id);
+                     if(callback != undefined){
+                        callback();
+                    }
+                } else {
+                    pos -= 0.002;
+
+                    idclass.style.opacity = pos ;
+                }
+            }
+        }
+      }
+
+
+			function onPressKey(letter,callback) {
+
+				var letter = letter;
+
+					idclass.onkeypress = function(e,letter2 = letter){
+
+					if(e.which == letter2){
+						callback();
+					}
+
+				}
+
+			}
+
+			function onClick(callback) {
+
+					idclass.onclick = function(){
+						callback();
+
+				}
+			}
+
+			function onChange(callback) {
+
+					idclass.onchange = function(){
+						callback();
+					}
+			}
+
 function element(){
 	return idclass;
 }
@@ -758,6 +927,10 @@ function element(){
 			height:height,
 			width:width,
 			src:src,
+			anim:anim,
+			onClick:onClick,
+			onChange:onChange,
+			onPressKey:onPressKey,
 			element:element
 
 		};
@@ -890,7 +1063,7 @@ var fs = true;
 	return actualNumber;
 }
 
-function countdown(date,days_count = true,hours_count = true,minutes_count = true,seconds_count = true){
+function countdown(date,days_count = true,hours_count = true,minutes_count = true,seconds_count = true,callback){
 	var countDownDate = new Date(date).getTime();
   var now = new Date().getTime();
   var distance = countDownDate - now;
@@ -934,6 +1107,9 @@ function countdown(date,days_count = true,hours_count = true,minutes_count = tru
     }
   }
   if (distance < 0) {
+		if(callback == undefined){
+			callback();
+		}
     return "Expired";
   }else{
     return result;
@@ -1147,6 +1323,8 @@ function loop(times,callback){
 }
 
 function onPressKey(idclass,letter,callback) {
+	console.warn('WARNING: the function "onPressKey()" is deprecated and it will be removed in the following versions, try to use "getElement(id or class).onPressKey()"');
+
 	var checkIdClass = checkIdClassOther(idclass);
 	idclass = idclass.substr(1);
 	var letter = letter;
@@ -1169,6 +1347,8 @@ function onPressKey(idclass,letter,callback) {
 }
 
 function onClick(idclass,callback) {
+	console.warn('WARNING: the function "onClick()" is deprecated and it will be removed in the following versions, try to use "getElement(id or class).onClick()"');
+
 	var checkIdClass = checkIdClassOther(idclass);
 	idclass = idclass.substr(1);
 	if(checkIdClass == "id"){
@@ -1192,6 +1372,9 @@ function onDocumentReady(callback){
 }
 
 function onChange(idclass,callback) {
+
+		console.warn('WARNING: the function "onChange()" is deprecated and it will be removed in the following versions, try to use "getElement(id or class).onChange()"');
+
 	var checkIdClass = checkIdClassOther(idclass);
 	idclass = idclass.substr(1);
 	if(checkIdClass == "id"){
@@ -1204,15 +1387,4 @@ function onChange(idclass,callback) {
 			callback();
 		}
 	}
-}
-
-var animales ={
-
-		perro: function(){
-			log("Esto es un Perro");
-		},
-
-		gato: function(){
-			log("Esto es un gato");
-		}
 }
