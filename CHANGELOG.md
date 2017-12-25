@@ -1,4 +1,14 @@
 
+#2.2.0 (25/12/2017)
+
+* Added deprecated warning to setImageSrc() function
+* Added deprecated warning to getImageSrc() function
+* Added deprecated warning to getText() function
+* Changed base64('encrypt',msg) function to base64.encrypt(msg)
+* Changed base64('decrypt',msg) function to base64.decrypt(msg)
+* Changed sha1(msg) function to sha1.encrypt(msg)
+
+
 #2.1.0 (25/12/2017)
 
 * Added getElement().width() function
