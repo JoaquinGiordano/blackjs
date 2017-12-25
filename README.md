@@ -6,3 +6,6 @@ If you want to use it in your web page or aplication made by a framework which s
 
 # Can I work in that project?
 Yes you can. Just open the Github BlackJS repository
+
+# Does it has a documentation?
+No yet, but we are working in that
