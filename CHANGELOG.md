@@ -1,4 +1,9 @@
 
+#2.4.0 (26/12/2017)
+
+* Added random() function
+* Added randomize() function
+
 #2.3.0 (25/12/2017)
 
 * Added a callback to the countdown() function
@@ -87,7 +92,7 @@
 * Added saveData() function
 * Added getData() function
 
-#1.2.0 (22/12/2017)
+#1.2.0 (22/12/2017) 72014a6
 
 * Added insert('h5') support
 * Added insert('h6') support
@@ -95,6 +100,6 @@
 * Added isEqual() function
 * Added contains() function
 
-#1.1.0 (22/12/2017)
+#1.1.0 (22/12/2017) bd762ab
 
 * Initial Commit
