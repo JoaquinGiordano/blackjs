@@ -1,4 +1,11 @@
 
+#2.5.0 (7/1/2018)
+
+* Added js-sha3
+* Added js-sha1
+* Changed the sha1.encrypt(text) function to sha1(text)
+* Changed insert() function
+
 #2.4.0 (26/12/2017)
 
 * Added random() function
