@@ -1,4 +1,8 @@
 
+#2.5.1 (13/1/2018)
+
+* Added JavaScript-MD5
+
 #2.5.0 (7/1/2018)
 
 * Added js-sha3
