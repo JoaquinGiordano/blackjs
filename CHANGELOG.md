@@ -1,4 +1,11 @@
 
+#2.5.2 (23/1/2018)
+
+* Removed JavaScript-MD5
+* Removed js-sha3
+* Removed js-sha1
+* The contains() function doesn't differentiate between capital letters
+
 #2.5.1 (13/1/2018)
 
 * Added JavaScript-MD5
