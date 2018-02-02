@@ -1,40 +1,26 @@
 
-getElement('#last-vers').innerHTML = "Last version: " + localStorage.getItem('blackjs-last-vers');
+	getElement('#last-vers').html.add("Last version: " + getData('blackjs-last-vers'));
 
-onClick('#githubpage_btn',function(){
+	getElement('#githubpage_btn').onClick(function(){
+		go('https://github.com/JoaquinGiordano/BlackJS');
+	});
 
-	go('https://github.com/JoaquinGiordano/BlackJS');
+	getElement('#email_btn').onClick(function(){
+		go('mailto:joaquin_giordano@outlook.com');
+	});
 
-});
+	getElement('#download_btn').onClick(function(){
+		go('https://joaquingiordano.github.io/BlackJS/versions/blackjs-'+ getData('blackjs-last-vers') +'.min.js');
+	});
 
-onClick('#email_btn',function(){
+	getElement('#download_unc_btn').onClick(function(){
+		go('https://joaquingiordano.github.io/BlackJS/versions/blackjs-'+ getData('blackjs-last-vers') +'.js');
+	});
 
-	go('mailto:joaquin_giordano@outlook.com');
+	getElement('#creator_page_btn').onClick(function(){
+		go('https://joaquingiordano.github.io/');
+	});
 
-});
-
-onClick('#download_btn',function(){
-
-	go('https://joaquingiordano.github.io/BlackJS/versions/blackjs-'+ localStorage.getItem('blackjs-last-vers') +'.min.js');
-
-});
-
-onClick('#download_unc_btn',function(){
-
-	go('https://joaquingiordano.github.io/BlackJS/versions/blackjs-'+ localStorage.getItem('blackjs-last-vers') +'.js');
-
-});
-
-onClick('#creator_page_btn',function(){
-
-	go('https://joaquingiordano.github.io/');
-
-});
-
-
-onClick('#creator_gh_page_btn',function(){
-
-	go('https://github.com/JoaquinGiordano');
-
-});
-
+	getElement('#creator_gh_page_btn').onClick(function(){
+		go('https://github.com/JoaquinGiordano');
+	});

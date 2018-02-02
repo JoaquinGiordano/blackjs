@@ -1,4 +1,21 @@
 
+#3.1.0 (2/2/2018) [important]
+
+* Removed insert() function because it was deprecated
+* Added getElement().html.add() function
+* Added getElement().html.set() function
+* Added styles.write() function
+
+#3.0.0 (2/2/2018) [important]
+
+* Removed getText() function because it was deprecated
+* Removed getImageSrc() function because it was deprecated
+* Removed setImageSrc() function because it was deprecated
+* Removed onPressKey() event because it was deprecated
+* Removed onClick() event because it was deprecated
+* Removed onChange() event because it was deprecated
+* Removed anim() function because it was deprecated
+
 #2.5.2 (23/1/2018)
 
 * Removed JavaScript-MD5

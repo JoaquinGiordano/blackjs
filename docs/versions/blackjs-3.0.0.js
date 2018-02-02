@@ -1,6 +1,6 @@
 
 // Copyright (c) 2017 Joaquin Giordano
-// version: 3.1.0
+// version: 3.0.0
 
 
 function checkIdClassOther(text){
@@ -14,6 +14,28 @@ function checkIdClassOther(text){
 	if (fl != "#" && fl != "."){
 		return "other";
 	}
+}
+
+function insert(where,what) {
+	var checkWhere = checkIdClassOther(where);
+	if(checkWhere == "id"){
+		where = where.substr(1);
+		document.getElementById(where).innerHTML += what;
+	}
+
+	if(checkWhere == "class"){
+		where = where.substr(1);
+		document.getElementsByClassName(where)[0].innerHTML += what;
+	}
+
+	if(checkWhere == "other"){
+		if(where == "body"){
+			document.body.innerHTML += what;
+		}
+
+	}
+
+
 }
 
 var base64 = {
@@ -71,13 +93,6 @@ var timer = {
 
 };
 
-var styles = {
-
-		add:function(text){
-					document.head.innerHTML += '<style> '+ text + '</style>';
-    			}
-
-};
 
 
 
@@ -153,15 +168,6 @@ function height(px){
 	}
 }
 
-var html = {
-	add: function(text){
-		idclass.innerHTML += text;
-	},
-	set: function(text){
-		idclass.innerHTML = text;
-	}
-
-}
 
 function anim(type,to,pos,quantity,velocity = 1,callback) {
     idclass.style.display = "block";
@@ -331,7 +337,6 @@ function element(){
 			width:width,
 			src:src,
 			anim:anim,
-			html:html,
 			onClick:onClick,
 			onChange:onChange,
 			onPressKey:onPressKey,
@@ -341,8 +346,6 @@ function element(){
 
 
 }
-
-
 
 	function random(num1,num2){
 
@@ -486,7 +489,6 @@ var fs = true;
 	return actualNumber;
 }
 
-// countdown example: countdown('13 aug 2021')
 function countdown(date,days_count = true,hours_count = true,minutes_count = true,seconds_count = true,callback){
 	var countDownDate = new Date(date).getTime();
   var now = new Date().getTime();
