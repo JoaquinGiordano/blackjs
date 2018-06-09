@@ -1,11 +1,6 @@
-# BlackJS
-BlackJS is an open source javascript library to ease your way of programming
+# Blackjs
+> Blackjs es una libreria de codigo abierto para JavaScript que facilita la manera de programar
 
-# How can I use it?
-If you want to use it in your web page or aplication made by a framework which supports javascript, you just have to import the BlackJS script that you can find in the BlackJS page
+## Como Utilizarlo
 
-# Can I work in that project?
-Yes you can. Just open the Github BlackJS repository
-
-# Does it has a documentation?
-No yet, but we are working in that
+Si tu quieres usarla en tu pagina web o en tu aplicacion creada por un framework que soporte JavaScript, simplemente importa el script de Blackjs, que puedes encontrarlo el la pagina de Blackjs
