@@ -1,12 +1,13 @@
 
 /**
- *  @function timer.start() function to create a loop
- *  @param func - function to loop
- *  @param ticks - velocity of the loops
+ *  @function timer.start create a loop
+ *  @param func function to loop
+ *  @param ticks velocity of the loops
+ *  @return loop 
  * 
  * 
- *  @function timer.stop() function to stop a loop
- *  @param timer_var - varible where the timer was created
+ *  @function timer.stop stop a timer
+ *  @param timer_var varible where the timer was created
 */
 
 var timer = {
