@@ -16,60 +16,7 @@ function checkIdClassOther(text){
 	}
 }
 
-var base64 = {
 
-	encrypt: function encrypt(msg) {
-		return btoa(msg);
-	},
-
-	decrypt: function decrypt(msg) {
-		return atob(msg);
-	}
-
-
-
-}
-
-
-function chars(text){
-	var checkText = checkIdClassOther(text);
-	if(checkText == "other"){
-		return text.length;
-	}
-	if(checkText == "id"){
-		text = text.substr(1);
-		try{
-			return document.getElementById(text).value.length;
-		}catch(err){
-			return document.getElementById(text).innerHTML.length;
-		}
-	}
-	if(checkText == "class"){
-		text = text.substr(1);
-		try{
-
-			return document.getElementsByClassName(text)[0].value.length;
-		}catch(err){
-
-			return document.getElementsByClassName(text)[0].innerHTML.length;
-		}
-	}
-}
-
-var timer = {
-
-		start:function(seconds,callback){
-					var ticks = seconds * 1000;
-    				var interval = setInterval(callback, ticks);
-    				return interval;
-    			},
-
-    	stop:function(timer_var){
-			clearInterval(timer_var);
-		}
-
-
-};
 
 var styles = {
 
@@ -78,7 +25,6 @@ var styles = {
     			}
 
 };
-
 
 
 function log(text){
