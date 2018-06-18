@@ -10,5 +10,5 @@ npm install
 ```
 ## Build
 ```
-grunt concat
+grunt
 ```
