@@ -1,0 +1,29 @@
+{
+  "name": "blackjs",
+  "version": "4.0.0",
+  "description": "BlackJS library for JavaScript",
+  "main": "dist/blackjs.js",
+  "directories": {
+    "example": "examples",
+    "test": "test"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/JoaquinGiordano/BlackJS.git"
+  },
+  "author": "Joaquin Giordano",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/JoaquinGiordano/BlackJS/issues"
+  },
+  "homepage": "https://github.com/JoaquinGiordano/BlackJS#readme",
+  "dependencies": {
+    "grunt": "^1.0.3"
+  },
+  "devDependencies": {
+    "grunt-contrib-concat": "^1.0.1"
+  }
+}
