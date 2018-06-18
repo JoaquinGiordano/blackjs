@@ -9,6 +9,8 @@ In your HTML file add the black.js script ```<script src ="blackjs.js"></script>
 npm install
 ```
 ## Build
+Run that code at the terminal
 ```
 grunt
 ```
+> It generates a build and a minifier of the library
