@@ -8,6 +8,14 @@ module.exports = function (grunt) {
                 dest: 'dist/blackjs.js',
             },
         },
+        watch: {
+            scripts: {
+              files: ['src/*.js'],
+              tasks: ['default']
+            },
+          },
     });
     grunt.loadNpmTasks('grunt-contrib-concat');
+    grunt.loadNpmTasks('grunt-contrib-watch');
+    grunt.registerTask('default', ["concat"]);
 };

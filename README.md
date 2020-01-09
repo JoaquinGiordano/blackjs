@@ -14,3 +14,9 @@ Run that code at the terminal
 grunt
 ```
 > It generates a build and a minifier of the library
+or use
+```
+grunt watch
+```
+to keep tracking the files while you are changing it
+

@@ -29,7 +29,7 @@ Object.prototype.saveData = function(where){
 }
 
 /**
- *  @function Object.gaveData get saved data and put it in a Object
+ *  @function Object.getData get saved data and put it in a Object
  *  @param {String} where where did you saved the data
 */
 

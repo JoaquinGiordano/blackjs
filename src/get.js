@@ -4,7 +4,7 @@
  *  @return {Number} chars quantity
 */
 
-Object.prototype.getChars = function () {
+Object.prototype.getChars = () => {
 
     if (this.nodeName === "INPUT"){
         return this.value.length;
@@ -19,7 +19,7 @@ Object.prototype.getChars = function () {
  *  @return {Number} chars quantity
 */
 
-String.prototype.getChars = function () {
+String.prototype.getChars = () => {
     return this.length;
 }
 
@@ -30,6 +30,7 @@ String.prototype.getChars = function () {
 */
 
 function getElement(arg) {
+    console.warn('This function will be deprecated soon. Try using "elemment.get(id/class)" instread of it.')
     return document.querySelector(arg);
 }
 
@@ -39,7 +40,7 @@ function getElement(arg) {
  *  @return {String} char at that position
 */
 
-Object.prototype.getChar = function(position) {
+Object.prototype.getChar = function (position) {
 
     if (this.nodeName === "INPUT") {
         return this.value.charAt(position);
@@ -60,4 +61,3 @@ String.prototype.getChar = function (position) {
     return this.charAt(position);
 
 }
-

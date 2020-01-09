@@ -1,9 +1,9 @@
 
 /**
- *  @function go navigate to another webpage or load an HTML file
+ *  @function navigate navigate to another webpage or load an HTML file
  *  @param {String} url Url to navigate
 */
 
-function go(url) {
+function navigate(url) {
     window.location = url;
 }

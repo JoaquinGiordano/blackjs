@@ -6,37 +6,65 @@
 /**
  *  @function Object.contain check if an object contains any text or character
  *  @param {String} data text to search
+ *  @param {Boolean} capitals if you want to diference between capitals letters or not
  *  @return {Boolean} true or false depends if the object contains that text or character
 */
 
-Object.prototype.contain = function (data) {
-    if (this.nodeName === "INPUT") {
-        if (this.value.toLowerCase().indexOf(data.toLowerCase()) != -1){
-            return true;
+Object.prototype.contain = function (data, capitals = false) {
+    if (!capitals){
+        if (this.nodeName === "INPUT") {
+            if (this.value.toLowerCase().indexOf(data.toLowerCase()) != -1){
+                return true;
+            }else{
+                return false;
+            }
         }else{
-            return false;
+            if (this.innerHTML.toLowerCase().indexOf(data.toLowerCase()) != -1) {
+                return true;
+            } else {
+                return false;
+            }
         }
     }else{
-        if (this.innerHTML.toLowerCase().indexOf(data.toLowerCase()) != -1) {
-            return true;
-        } else {
-            return false;
+        if (this.nodeName === "INPUT") {
+            if (this.value.indexOf(data) != -1){
+                return true;
+            }else{
+                return false;
+            }
+        }else{
+            if (this.innerHTML.indexOf(data) != -1) {
+                return true;
+            } else {
+                return false;
+            }
         }
     }
+    
 }
 
 /**
  *  @function String.contain check if a string contains any text or character
  *  @param {String} data text to search
+ *  @param {Boolean} capitals if you want to diference between capitals letters or not
  *  @return {Boolean} true or false depends if the string contains that text or character
 */
 
-String.prototype.contain = function (data) {
-    if (this.toLowerCase().indexOf(data.toLowerCase()) != -1) {
-        return true;
-    } else {
-        return false;
+String.prototype.contain = function (data, capitals = false) {
+    if(!capitals){
+        if (this.toLowerCase().indexOf(data.toLowerCase()) != -1) {
+            return true;
+        } else {
+            return false;
+        }
+    }else{
+        if (this.indexOf(data) != -1) {
+            return true;
+        } else {
+            return false;
+        }
     }
+   
 }
 
 /**
@@ -69,7 +97,7 @@ Object.prototype.saveData = function(where){
 }
 
 /**
- *  @function Object.gaveData get saved data and put it in a Object
+ *  @function Object.getData get saved data and put it in a Object
  *  @param {String} where where did you saved the data
 */
 
@@ -96,12 +124,23 @@ function getData(where) {
 
 
 
+const element = {
+     /**
+     *  @function element.get Get an HTML Element
+     *  @param {String} arg The id or class of the element
+     *  @return {Element} HTML Element
+    */
+    get:function (arg){
+        return document.querySelector(arg);
+    }
+}
+
 /**
  *  @function Object.getChars get the quantity of characters that an object have
  *  @return {Number} chars quantity
 */
 
-Object.prototype.getChars = function () {
+Object.prototype.getChars = () => {
 
     if (this.nodeName === "INPUT"){
         return this.value.length;
@@ -116,7 +155,7 @@ Object.prototype.getChars = function () {
  *  @return {Number} chars quantity
 */
 
-String.prototype.getChars = function () {
+String.prototype.getChars = () => {
     return this.length;
 }
 
@@ -127,6 +166,7 @@ String.prototype.getChars = function () {
 */
 
 function getElement(arg) {
+    console.warn('This function will be deprecated soon. Try using "elemment.get(id/class)" instread of it.')
     return document.querySelector(arg);
 }
 
@@ -136,7 +176,7 @@ function getElement(arg) {
  *  @return {String} char at that position
 */
 
-Object.prototype.getChar = function(position) {
+Object.prototype.getChar = function (position) {
 
     if (this.nodeName === "INPUT") {
         return this.value.charAt(position);
@@ -159,15 +199,110 @@ String.prototype.getChar = function (position) {
 }
 
 
-
 /**
- *  @function go navigate to another webpage or load an HTML file
+ *  @function navigate navigate to another webpage or load an HTML file
  *  @param {String} url Url to navigate
 */
 
-function go(url) {
+function navigate(url) {
     window.location = url;
 }
+
+const group = [
+    ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i'], 
+    ['j', 'k', 'l', 'm', 'n', 'ñ', 'o', 'p', 'q'], 
+    ['r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z'],
+    ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I'],
+    ['J', 'K', 'L', 'M', 'N', 'Ñ', 'O', 'P', 'Q'],
+    ['R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z'],
+    ['1', '2', '3', '4', '5', '6', '7', '8', '9'],
+    ['+', '(', ')', '{', '}', '[', ']', '<', '>'],
+    ['!', '#', '@', ',', '.', ';', ':', '-', '_'],
+    ['0', '"', '°', '¿', '?', '*', '%', "/", " "]
+]
+
+const godane = {
+    
+    /**
+     *  @function godane.encode encode a String in GodaneCode
+     *  @param {String} data String to encode
+     *  @return {String} Encoded Data
+    */
+   
+    encode: function(data){
+        let final = '';
+        const dl = data.split('')
+        dl.forEach(i => {
+            for (let g = 0; g <= 9; g++) {
+                if (group[g].indexOf(i) > -1){
+                    let ag = [];
+                    switch (g) {
+                        case 0:
+                        case 3:
+                        case 6:
+                        case 9:
+                            ag = group[2];
+                            break;
+                        case 1:
+                        case 4:
+                        case 7:
+                            ag = group[0];
+                            break;
+                        case 2:
+                        case 5:
+                        case 8:
+                            ag = group[1];
+                            break;
+                            
+                    }
+                    final += `${ag[group[g].indexOf(i)]}${g}`;
+                }
+            }
+        });
+    return final;
+    },
+
+     /**
+     *  @function godane.decode decode a String in GodaneCode
+     *  @param {String} data String to decode
+     *  @return {String} Decoded Data
+    */
+   
+    decode: function(data){
+        let final = '';
+        let counter = 0;
+        const dl = data.split('')
+        for (let i = 0; i < dl.length / 2; i++) {
+            let charpos = 0;
+            char = dl[counter];
+            chargroup = dl[counter + 1];
+            ag = group[chargroup];
+            switch (Number(chargroup)) {
+                case 0:
+                case 3:
+                case 6:
+                case 9:
+                    charpos = group[2].indexOf(char)
+                    break;
+                case 1:
+                case 4:
+                case 7:
+                    charpos = group[0].indexOf(char)
+                    break;
+                case 2:
+                case 5:
+                case 8:
+                    charpos = group[1].indexOf(char)
+                    break;
+
+            }
+            final += ag[charpos]
+            counter += 2;
+        }
+        return final;
+    }
+}
+
 
 
 /**
@@ -239,11 +374,11 @@ var timer = {
 
 /**
  *  @function loop crate a loop
- *  @param {Number} times times that this loop will be executed
  *  @param {Function} func function that this loop will execute
+ *  @param {Number} times times that this loop will be executed
 */
 
-function loop(times, func) {
+function loop(func,times = 1) {
     times -= 1;
     for (var i = 0; i <= times; i++) {
         func();
@@ -352,6 +487,18 @@ function multiply(numbers) {
         }
     })
     return actualNumber;
+}
+
+/**
+ *  @function ruleOfThree do a rule of three
+ *  @param {Number} a first number              (if this)
+ *  @param {Number} b second number             (is equal to this)
+ *  @param {Number} c third number              (so this)
+ *  @return {Number}  result                    (will be equal to this)
+*/
+
+function ruleOfThree(a,b,c) {
+    return (c*b) / a;
 }
 
 /**

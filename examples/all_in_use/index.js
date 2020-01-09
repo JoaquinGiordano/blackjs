@@ -10,6 +10,7 @@ log(chars('#paper'));
 
 getElement('#paper2').innerHTML = "Sum number: " + sum([2,2,2]) + " Subs number: " + subs([256,128,64]) + " Devide number: " + devide([10,2]) + " Multiply number: " + multiply([5,5]);
 
+
 log(getText('#paper2'));
 
 log(getImageSrc('#images'));

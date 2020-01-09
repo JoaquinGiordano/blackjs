@@ -26,11 +26,11 @@ var timer = {
 
 /**
  *  @function loop crate a loop
- *  @param {Number} times times that this loop will be executed
  *  @param {Function} func function that this loop will execute
+ *  @param {Number} times times that this loop will be executed
 */
 
-function loop(times, func) {
+function loop(func,times = 1) {
     times -= 1;
     for (var i = 0; i <= times; i++) {
         func();

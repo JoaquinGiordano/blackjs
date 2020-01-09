@@ -1,6 +1,6 @@
 {
   "name": "blackjs",
-  "version": "4.0.0",
+  "version": "3.2.0",
   "description": "BlackJS library for JavaScript",
   "main": "dist/blackjs.js",
   "directories": {
@@ -21,9 +21,10 @@
   },
   "homepage": "https://github.com/JoaquinGiordano/BlackJS#readme",
   "dependencies": {
-    "grunt": "^1.0.3"
+    "grunt": "^1.0.4"
   },
   "devDependencies": {
-    "grunt-contrib-concat": "^1.0.1"
+    "grunt-contrib-concat": "^1.0.1",
+    "grunt-contrib-watch": "^1.1.0"
   }
 }

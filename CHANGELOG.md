@@ -1,4 +1,16 @@
 
+#3.2.0 (9/1/2020) [important]
+
+* Added godaneCode
+* Added ruleOfThree() function
+* Added element.get() function to use instread of getElement()
+* Added deprecated warning to getElement() function
+* The contain() function allows you to decide to differentiate between capital letters
+* The go() function now is called navigate() function
+* The loop() function sintaxis has changed
+* Grunt watch Added
+* Grunt problems and vulnerabilities solved
+
 #3.1.0 (2/2/2018) [important]
 
 * Removed insert() function because it was deprecated

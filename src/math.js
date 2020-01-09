@@ -102,3 +102,15 @@ function multiply(numbers) {
     })
     return actualNumber;
 }
+
+/**
+ *  @function ruleOfThree do a rule of three
+ *  @param {Number} a first number              (if this)
+ *  @param {Number} b second number             (is equal to this)
+ *  @param {Number} c third number              (so this)
+ *  @return {Number}  result                    (will be equal to this)
+*/
+
+function ruleOfThree(a,b,c) {
+    return (c*b) / a;
+}
