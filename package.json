@@ -1,6 +1,6 @@
 {
   "name": "blackjs",
-  "version": "3.2.0",
+  "version": "4.1.0",
   "description": "BlackJS library for JavaScript",
   "main": "dist/blackjs.js",
   "directories": {

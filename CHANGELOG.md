@@ -1,5 +1,5 @@
 
-#3.2.0 (9/1/2020) [important]
+#4.1.0 (9/1/2020) [important]
 
 * Added godaneCode
 * Added ruleOfThree() function
@@ -10,6 +10,10 @@
 * The loop() function sintaxis has changed
 * Grunt watch Added
 * Grunt problems and vulnerabilities solved
+
+#4.0.0 (17/6/2018) [important]
+
+* Added Grunt support
 
 #3.1.0 (2/2/2018) [important]
 
